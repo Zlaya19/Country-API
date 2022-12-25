@@ -16,7 +16,8 @@ function getTheText(e) {
             apiValue = JSON.parse(this.responseText);
             output.classList.add('classWord');
             output.innerHTML = `<span1>${apiValue[0].name}</span1>`;
-            output.innerHTML += `<img src="${apiValue[0].flag} "width="300px">` + "<br>";
+            output.innerHTML += `<a href="https://www.wikipedia.org/wiki/${apiValue[0].name}">
+                                <img src="${apiValue[0].flag} "width="320px""></a>` + "<br>";
             output.innerHTML += `<span>capital</span>` + apiValue[0].capital +"<br>";
             output.innerHTML += `<span>population</span>` + apiValue[0].population +"<br>";
             /* output.innerHTML += `<span>borders</span>` + apiValue[0].borders +"<br>"; */
